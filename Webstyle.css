@@ -1,0 +1,113 @@
+body{background: white;
+    background-size:100%; 
+    }
+img{position: center;}
+@font-face {
+    font-family: chase;
+    src: url("Chasing Embers Demo Version.ttf");
+}
+@font-face {
+    font-family: julia;
+    src: url("JuliasDream-Regular 13.40.37.otf");
+}
+@font-face {
+    font-family: cour;
+    src: url("cour.ttf");
+}
+@font-face {
+    font-family: sophia;
+    src: url("Sophia.otf");
+}
+@font-face {
+    font-family: audrey;
+    src: url("Audrey-Normal.otf");
+}
+@font-face {
+    font-family: shella;
+    src: url("ShellaheraScriptDemo.otf");
+}
+@font-face {
+    font-family: latte;
+    src: url("KGSkinnyLatte.ttf");
+}
+@font-face {
+    font-family: surf;
+    src: url("Surfing Capital.ttf");
+}
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    border: none;
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: black;
+    color:white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 50px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: latte;
+    font-size: 20px
+}
+
+.dropdown-content a:hover {background-color: black;
+    color: white;}
+
+.show {display:block;}
+
+.pos {
+    height: 200px;
+    width: 400px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+
+h3{font-family: cour;
+    text-align:center;
+    font-size: 30px;
+    color:white;}
+
+h1{margin: 0;
+font-family: chase;
+color: black;
+font-size: 80px;
+text-align: center;}
+
+
+h2{font-family: sophia;
+    color:black;
+    font-size: 25px;
+    text-align: center;
+    }
+
+
+
+
+

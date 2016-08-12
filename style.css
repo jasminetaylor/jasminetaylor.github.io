@@ -1,0 +1,181 @@
+@font-face {
+    font-family: chase;
+    src: url("Chasing Embers Demo Version.ttf");
+}
+@font-face {
+    font-family: latte;
+    src: url("KGSkinnyLatte.ttf");
+}
+@font-face {
+    font-family: cour;
+    src: url("cour.ttf");
+}
+@font-face {
+    font-family: sophia;
+    src: url("Sophia.otf");
+}
+h1{font-family: chase;
+color: black;
+font-size: 80px;
+margin: 0;
+text-align: center;}
+h2{font-family: sophia;
+    color:black;
+    font-size: 25px;
+    text-align: center;
+    }
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    border: none;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: black;
+    color:white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-family: latte;
+    font-size: 20px
+}
+
+.dropdown-content a:hover {background-color: black;
+    color: white;}
+
+.show {display:block;}
+
+
+*{
+  margin:0;
+  padding:0;
+}
+
+.clr:after{
+  content:"";
+  display:block;
+  clear:both;
+}
+#categories li{
+  position:relative;
+  list-style-type:none;
+  width:27.85714285714286%; /* = (100-2.5) / 3.5 */
+  padding-bottom: 32.16760145166612%; /* =  width /0.866 */
+  float:left;
+  overflow:hidden;
+  visibility:hidden;
+  -webkit-transform: rotate(-60deg) skewY(30deg);
+  -ms-transform: rotate(-60deg) skewY(30deg);
+  transform: rotate(-60deg) skewY(30deg);
+}
+#categories li:nth-child(3n+2){
+  margin:0 1%;
+}
+#categories li:nth-child(6n+4){
+  margin-left:0.5%;
+}
+#categories li:nth-child(6n+4), #categories li:nth-child(6n+5), #categories li:nth-child(6n+6) {
+	margin-top: -6.9285714285%;
+  margin-bottom: -6.9285714285%;
+  
+  -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+  transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+#categories li:nth-child(6n+4):last-child, #categories li:nth-child(6n+5):last-child, #categories li:nth-child(6n+6):last-child{
+  margin-bottom:0%;
+}
+#categories li *{
+  position:absolute;
+  visibility:visible;
+}
+#categories li > div{
+  width:100%;
+  height:100%;
+  text-align:center;
+  color:#fff;
+  overflow:hidden;
+  
+  -webkit-transform: skewY(-30deg) rotate(60deg);
+  -ms-transform: skewY(-30deg) rotate(60deg);
+  transform: skewY(-30deg) rotate(60deg);
+  
+	-webkit-backface-visibility:hidden;
+  
+}
+
+/* HEX CONTENT */
+#categories li img{
+  left:-100%; right:-100%;
+  width: auto; height:100%;
+  margin:0 auto;   
+}
+
+#categories div h1, #categories div p{
+  width:90%;
+  padding:0 5%;
+  background-color:#008080; background-color: rgba(0, 128, 128, 0.8);
+  -webkit-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+  -ms-transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+  transition: top .2s ease-out, bottom .2s ease-out, .2s padding .2s ease-out;
+}
+#categories li h1{
+  font-family: chase;
+  color:white;
+  bottom:110%;
+  font-style:italic;
+  font-weight:normal;
+  font-size:2.5em;
+  padding-top:100%;
+  padding-bottom:100%;
+}
+#categories li h1:after{
+  font-family: cour;
+  content:'';
+  display:block;
+  position:absolute;
+  bottom:-1px; left:45%;
+  width:10%;
+  z-index:1;
+  border-bottom:2px solid #fff;
+}
+#categories li p{
+  font-family: cour;
+	padding-top:50%;
+	top:110%;
+	padding-bottom:50%;
+	font-size: 12px;
+}
+
+
+/* HOVER EFFECT  */
+
+#categories li div:hover h1 {
+  bottom:50%;
+  padding-bottom:10%;
+}
+
+#categories li div:hover p{
+  top:50%;
+  padding-top:2.5%;
+}
