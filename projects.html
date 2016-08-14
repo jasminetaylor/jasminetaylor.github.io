@@ -24,29 +24,40 @@
 	<a href="AboutMe.html">ABOUT</a>
   </div>	
   <h1> Jasmine Dang </h1>
-  <h2> Projects </h2>
+  <h2> My Projects: </h2>
 	<style>
-    	body{background-image: url("70.jpg")
+    	body{background-image: url("7.png")
     </style>
-	
-  	<a href="capture(.jpg"> 
-     <img src="logo-small.png">
-    </a>
-<a href="Menu.py"> 
-  <img src="logo-small.png">
-</a> 
+<style>
+.mySlides {display:none;}
+</style>
 
-    <a href="output.jpg"> 
-    <img src="logo-small.png">
-    </a> 
+<div class="slideshow">
+  <a Href = "capture(.jpg"> City Scroller... </a> <img class="mySlides" src="capture(.jpg" style="width:100%"> 
+  <a Href = "menu.py"> Random generator... </a> <img class="mySlides" src="random.png" style="width:100%"> 
+  <a Href = "output.jpg"> Obamicon... </a> <img class="mySlides" src="output.jpg" style="width:100%"> 
+  <a Href = "Bouncingball.jpg"> Bouncing Ball... </a> <img class="mySlides" src="Bounce_Ball_Class.py" style="width:100%">  
+  <a Href = "song.jpg"> Piezo Song...... </a> <img class="mySlides" src="song.jpg" style="width:100%"> 
+</div>
 
-<a href="Bounce_Ball_Class.py"> 
-  <img src="logo-small.png">
-</a> 
 
-    <a href="song.jpg"> 
-     <img src="logo-small.png">
-    </a> 
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 4000); 
+}
+</script>
+  	
 
 	</body>
 	</html>
