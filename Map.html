@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="shortcut icon" type="image/x-icon" href="tab.png" />
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial scale=1">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="Webstyle.css">
+      <script src="animate.js"></script>
+    <style>
+       #map {
+        width: 100%;
+        height: 400px;
+        margin-top: 5%;
+        background-color:white; 
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="Home">
+<img onclick="myFunction()" src="menu.png" width="100" height="50" class="dropbtn">
+  <div id="myDropdown" class="dropdown-content">
+  <a href="index.html">HOME</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="Map.html">LA 2.0</a>
+  <a href="AboutMe.html">ABOUT</a>
+  </div>
+  <h1>A Taste of Los Angeles</h1>
+  <div id="map"></div> 
+     
+    <script>
+      var map;
+      function initialize() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: new google.maps.LatLng(34.152129, -118.336582),
+    mapTypeControlOptions: {
+        mapTypeIds: ['map_style', google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.ROADMAP],
+        position: google.maps.ControlPosition.TOP_RIGHT},
+        });
+        var icons = {
+          place: {
+            icon: 'world.png'
+          }
+        };
+      function addMarker(feature, InfoWindow) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map,
+            animation: google.maps.Animation.DROP,
+          });
+          marker.addListener('click', function(){
+            InfoWindow.open(map,marker);
+          });
+        }
+  var features = [
+          {
+            position: new google.maps.LatLng(34.040801, -118.253643),
+            type: 'place'
+          }, {
+            position: new google.maps.LatLng(34.051447, -118.256606),
+            type: 'place'
+          }, {
+            position: new google.maps.LatLng(34.143417, -118.183576),
+            type: 'place'
+          }, {
+            position: new google.maps.LatLng(34.137868, -118.352863),
+            type: 'place'
+          }, {
+            position: new google.maps.LatLng(34.072462, -118.358099),
+            type: 'place'
+          }, {
+            position: new google.maps.LatLng(34.152129, -118.336582),
+            type: 'place'
+          }, {
+            position: new google.maps.LatLng(34.075871,-118.348435),
+            type: 'place'
+          }
+        ];
+
+
+                        
+    // Info Window Content
+    
+    var InfoWindows = [
+    {
+        contentString: '<h4>Pressed Juicery</h4>' + "<img width='200' src='pressedj.jpeg'>" + '<p>Pressed Juciery is a place where you can get juices or frozen juices (the frozen juices taste just like ice cream, only they are healthier!) Additionally, you get the choice of putting whichever toppings you want on it. Personally this is one of my favorite places to grab a treat. I always go here with my mom and sister.</p>'
+      },{
+        contentString: '<h4>Lemonade</h4>' + "<img width='200' src='lemon.jpeg'>" + '<p> The Lemonade here is amazing! There are so many different flavors to choose from and their macaroons are huge. My sister first introduced me to this place and I am glad that she did. It is a great place to grab a bite with family or friends.</p>'
+      },{
+        contentString: '<h4>The HOLLYWOOD Hike</h4>' + "<img width='200' src='hike.jpg'>" + '<p>The hike takes you up right behind the Hollywood sign and leads to many great photo opts. If you have the time and like to hike it is defintely worth it. I like to take pictures and hike so this was just perfect for me. Be prepared to sweat with Californias heat!</p>'
+      },{
+        contentString: '<h4>Universal Studios</h4>' + "<img  width='150' src='Universal.jpeg'>" + '<p> This is my favorite theme park to visit! There is so much to do and the rides are really fun. Plus you can take a studio tour and see how movies are made, it does not get much better than that! Sometimes there are free concerts at the City Walk you can attend and many food options too. They also just added Harry Potter World there. </p>'
+      },{
+        contentString: '<h4>The Grove</h4>' + "<img width='200' src='grove.jpg'>" + '<p>This is a huge shopping center that always has something going on. If you want to shop this is a great place to go. I like going with my mom and sister.</p>'
+      },{
+        contentString: '<h4>Warner Brothers Studio</h4>' + "<img width='200' src='WBT.jpg'>" + '<p>I was lucky enough to have gotten the chance of seeing where some of my favorite shows and movies were filmed. If you ever get the chance I would definitely go! This tour changed my perspective (and blew my mind) about the film industry.</p>'
+      },{
+        contentString: '<h4>MILK Dessert Shop</h4>' + "<img width='200' src='milk.jpg'>" + '<p>They have delicious ice cream type sandwiches which are really big with many different flavor profiles to chose from. If you are looking to eat some to dessert, keep this place in mind.</p>'
+        }
+        ];
+
+        for (var i = 0, feature; feature = features[i]; i++) {
+          var infowindow = new google.maps.InfoWindow({
+            content: InfoWindows[i].contentString
+          });
+          addMarker(feature, infowindow);
+        }}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsHhRElw4Yu1_pB-Dprle1ARqAPoQrSvI&callback=initialize">
+    </script>    
+  </body>
+</html>
